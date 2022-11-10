@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        display: block;
+        float: left;
+      }
+      .result {
+        margin-top: 400px;
+      }
+
+      .com {
+        display: inline;
+      }
+      .me {
+        display: inline;
+      }
+    </style>
+    <script>
+      // let today = new Date();
+      // document.write(today.getFullYear() + "<br>");
+      // document.write(today.getMonth() + 1 + "<br>");  // 0 ~ 11
+      // document.write(today.getDate() + "<br>")
+      // document.write(today.getDay() + "<br>");    // 0 ~ 6
+
+      // let day = today.getDay();
+
+      // switch(day) {
+      //     case 0:document.write("일요일");
+      //     break;
+      //     case 1:document.write("월요일");
+      //     break;
+      //     case 2:document.write("화요일");
+      //     break;
+      //     case 3:document.write("수요일");
+      //     break;
+      //     case 4:document.write("목요일");
+      //     break;
+      //     case 5:document.write("금요일");
+      //     break;
+      //     case 6:document.write("토요일");
+      //     break;
+      // }
+
+      // document.write("<br>==============================<br>");
+
+      // today.setFullYear(2000);
+      // today.setMonth(10);
+      // today.setDate(3);
+
+      // document.write(today.getFullYear() + "<br>");
+      // document.write(today.getMonth() + 1 + "<br>");  // 0 ~ 11
+      // document.write(today.getDate() + "<br>")
+      // document.write(today.getDay() + "<br>");    // 0 ~ 6
+
+      // day = today.getDay();
+
+      // switch(day) {
+      //     case 0:document.write("일요일");
+      //     break;
+      //     case 1:document.write("월요일");
+      //     break;
+      //     case 2:document.write("화요일");
+      //     break;
+      //     case 3:document.write("수요일");
+      //     break;
+      //     case 4:document.write("목요일");
+      //     break;
+      //     case 5:document.write("금요일");
+      //     break;
+      //     case 6:document.write("토요일");
+      //     break;
+      // }
+
+      // document.write("<br>==============================<br>");
+
+      // let start = new Date(2020,7,1);
+
+      // document.write(start.getFullYear() + "<br>");
+      // document.write(start.getMonth() + 1 + "<br>");  // 0 ~ 11
+      // document.write(start.getDate() + "<br>")
+      // document.write(start.getDay() + "<br>");    // 0 ~ 6
+
+      //   let today = new Date();
+      //   let nowYear = today.getFullYear();
+
+      //   let theDate = new Date(nowYear, 11, 31);
+      //   let diffDate = theDate.getTime() - today.getTime();
+
+      //   let result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+      //   document.write("<h1>오늘부터 올해 연말까지 남은 날짜</h1>");
+      //   document.write("D-day: " + result + "일 남았습니다.");
+
+      //   (int)(Math.random() * 10) + 1; // 1 ~ 10
+
+      //   for (let i = 1; i <= 10; i++) {
+      //     let ran = Math.floor(Math.random() * 10) + 1;
+      //     document.write(ran + "<br>");
+      //   }
+
+      document.write("<h1>1.가위 2.바위 3.보 게임</h1>");
+
+      let me = prompt("숫자입력", "");
+
+      let com = Math.floor(Math.random() * 3) + 1;
+
+      document.write("<img src=img/rsp_" + com + ".jpg>");
+
+      if (com == me) {
+        document.write('<img class="result" src="img/draw.jpg">');
+      } else if (
+        (com == 1 && me == 2) ||
+        (com == 2 && me == 3) ||
+        (com == 3 && me == 1)
+      ) {
+        document.write('<img class="result" src="img/win.jpg">');
+      } else if (
+        (com == 1 && me == 3) ||
+        (com == 2 && me == 1) ||
+        (com == 3 && me == 2)
+      ) {
+        document.write('<img class="result" src="img/lose.jpg">');
+      } else {
+        document.write(alert("도대체 뭘 입력한거야?"));
+      }
+
+      document.write('<img class="img" src=img/rsp_' + me + ".jpg>");
+    </script>
+  </head>
+  <body></body>
+</html>
