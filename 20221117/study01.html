@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //객체(태그)편집 메소드(추가, 삭제, 수정)
+        //기존요소를 앞에다 작성하고 추가되는 요소를 뒤에다 작성
+        //추가되는 요소를 앞에다 작성하고 기존요소를 뒤에다 작성
+
+        // //after(), before()
+        // $("#wrap p:eq(2)").after("<p>After</p>");
+        // $("#wrap p:eq(1)").before("<p>After</p>");
+        // $("<p>insertBefore</p>").insertBefore("#wrap p:eq(0)");
+
+        // //append(), prepend()
+        // $("<li>appendTo</li>").appendTo("#listZone");
+        // $("#listZone").prepend("<li>prepend</li>");
+
+        // //clone(), empty(), remove()
+        // let objCopy = $(".box1").children().clone();
+        // //<div class="box1">의 모든 자식 요소를 복사하여 objCopy에 저장한다.
+        // $(".box2").remove();
+        // //<div class="box2">의 요소를 지운다.
+        // $(".box3").empty();
+        // //<div class="box3">의 모든 하위 요소를 지운다.
+        // $(".box3").append(objCopy);
+        // //<div class="box3">의 맨 뒤에 objCopy에 저장된 요소를 추가한다.
+
+        //replaceAll(), replaceWith()
+        // $("h2").replaceWith("<h3>replaceWith()</h3>");
+        // $("<p>replaceAll()</p>").replaceAll("div");
+
+        //unwrap(), wrap(), wrapAll(), wrapInner()
+        $("strong").unwrap(); //<strong>을 감싸는 부모 요소를 제거한다.
+        $(".ct1").wrap("<div />"); //class값이 "ct1"인 요소를 각각 <div>요소로 감싼다.
+        $(".ct2").wrapAll("<div />"); //class값이 "ct2"인 요소 전체를 <div> 요소로 감싼다.
+        $("li").wrapInner("<h3 />"); //<li> 요소의 모든 하위 요소를 <h3> 요소로 감싼다.
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="tit_1">
+      <strong>객체 조작 및 생성</strong>
+    </h1>
+    <p class="ct1">내용1</p>
+    <p class="ct1">내용2</p>
+    <p class="ct2">내용3</p>
+    <p class="ct2">내용4</p>
+    <ul>
+      <li>내용3</li>
+      <li>내용4</li>
+    </ul>
+
+    <!-- <section class="box1">
+        <h2>제목1</h2>
+        <div>내용1</div>
+        <div>내용2</div>
+    </section>
+    <section class="box2">
+        <h2>제목2</h2>
+        <div>내용3</div>
+        <div>내용4</div>
+    </section> -->
+
+    <!-- <div class="box1">
+        <p>내용1</p>
+        <p>내용2</p>
+    </div>
+
+    <div class="box2">
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+
+    <div class="box3">
+        <p>내용5</p>
+        <p>내용6</p>
+    </div> -->
+
+    <!-- <ul id="listZone">
+        <li>리스트</li>
+      </ul>
+
+    <div id="wrap">
+      <p>내용1</p>
+      <p>내용2</p>
+      <p>내용3</p>
+
+    </div>-->
+  </body>
+</html>

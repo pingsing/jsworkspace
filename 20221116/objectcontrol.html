@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+      //객체조작 메소드
+      //생성, 복제, 삭제, 속성변화
+
+      //html() => 태그의 정보를 읽기
+      //html("값") => 태그의 정보를 변경
+      //text()
+      //text("값")
+      //<p> 내용 </p>   // <p> : 태그    내용 : 텍스트
+
+      //일반태그 : <span> => text()
+      //폼 태그 : <form> <input> <textarea> => val()
+
+      //css(): css효과를 직접정의해서 적용
+      //addClass(): <style>에 작성된 class 속성을 가져와서 적용
+
+      $(function () {
+        // let result_1 = $("#sec_1").html();
+        // console.log(result_1);
+        // $("#sec_1 p").html('<a href="#">Text1</a>');
+        // let result_2 = $("#sec_2").html();
+        // console.log(result_2);
+        // $("#sec_2 h2").text("문자변경");
+        // let srcval = $("img").attr("src");
+        // console.log(srcval);
+        // $("img").attr({ src: "../20221110/img/rsp_2.jpg" });
+        // $("#p1").addClass("red");
+        // $("#p2").addClass("blue");
+        // $("#p3").removeClass("green");
+        // let name = $("#user_name").val();
+        // console.log(name);
+        // $("#user_name").val("이순신");
+        // <input type="checkbox"> //checked
+        // <select name="se_1" id="se_1">  // selected, selectedIndex
+        // let result1 = $("#chk1").prop("checked");
+        // console.log(result1); //true, false
+        // let result2 = $("#chk2").prop("checked");
+        // console.log(result2); //true, false
+        // let result3 = $("#chk3").prop("checked", "true");
+        // console.log(result3); //true, false
+        // let selectIndex = $("#se_1").prop("selectedIndex");
+        // console.log(selectIndex); // 2
+        // let w1 = $("#p1").width();
+        // console.log(w1);
+        // let w2 = $("#p1").innerWidth();
+        // console.log(w2);
+        // let w3 = $("#p1").outerWidth();
+        // console.log(w3);
+        // $("#p2").outerWidth(100).outerHeight(100);
+        // let $txt1 = $(".txt_1 span");
+        // let $txt2 = $(".txt_2 span");
+        // let $box = $(".box");
+        // let off_top = $box.offset().top;
+        // let pos_top = $box.position().top;
+        // $txt1.text(off_top); //절대좌표
+        // $txt2.text(pos_top); //상대좌표
+
+        let topoff = $("h1").offset().top;
+        $(window).scrollTop(topoff);
+
+        let sct = $(window).scrollTop();
+        console.log(sct);
+        if (sct == 2000) {
+          $("body").css("background-color", "red");
+        }
+      });
+    </script>
+    <style>
+      /* .red {
+          background-color: red;
+        }
+        .blue {
+          background-color: blue;
+        }
+        .green {
+          background-color: green;
+        } */
+
+      /* #p1,
+      #p2 {
+        width: 100px;
+        height: 50px;
+        padding: 20px;
+        border: 5px solid black;
+      } */
+
+      /* * {
+        margin: 0;
+        padding: 0;
+      }
+      #box_wrap {
+        width: 300px;
+        height: 200px;
+        margin: 50px auto 0;
+        position: relative;
+        background-color: #ccc;
+      }
+
+      .box {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        background-color: #f00;
+      } */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        line-height: 1;
+      }
+      #wrap {
+        height: 5000px;
+        padding-top: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>위치 메서드</h1>
+    </div>
+
+    <!-- <div id="box_wrap">
+      <p class="box">박스</p>
+    </div>
+    <p class="txt_1">절대 top위칫값: <span></span></p>
+    <p class="txt_2">상대 top위칫값: <span></span></p> -->
+
+    <!-- <h1>수치조작 메소드</h1>
+    <p id="p1">내용1</p>
+    <p id="p2">내용2</p> -->
+
+    <!-- <h1><strong>객체 조작 및 생성</strong></h1>
+    <form action="#" id="form_1">
+      <p>
+        <input type="checkbox" name="chk1" id="chk1" />
+        <label for="chk1">chk1</label>
+        <input type="checkbox" name="chk2" id="chk2" checked />
+        <label for="chk2">chk2</label>
+        <input type="checkbox" name="chk3" id="chk3" />
+        <label for="chk3">chk3</label>
+      </p>
+      <p>
+        <select name="se_1" id="se_1">
+          <option value="opt1">option1</option>
+          <option value="opt2">option2</option>
+          <option value="opt3" selected>option3</option>
+        </select>
+      </p>
+    </form> -->
+
+    <!-- <form>
+      <input type="text" value="홍길동" id="user_name" />
+    </form> -->
+    <!-- <p id="p1">내용1</p>
+    <p id="p2">내용2</p>
+    <p id="p3" class="green">내용3</p> -->
+    <!-- <img src="../20221110/img/rsp_1.jpg" alt="가위" />
+
+    <h1><strong>객체 조작 및 생성</strong></h1>
+    <section id="sec_1">
+      <h2><em>html()</em></h2>
+      <p>내용1</p>
+    </section>
+    <section id="sec_2">
+      <h2><em>텍스트()</em></h2>
+      <p>내용2</p>
+    </section> -->
+    <script></script>
+  </body>
+</html>

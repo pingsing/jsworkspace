@@ -84,15 +84,15 @@
 
       //   sum(10, 20, 30, 40, 50);
 
-      let sum1 = 0;
-      function sum(...number) {
-        for (let i = 0; i < number.length; i++) {
-          sum1 += number[i];
-        }
-        document.write(sum1);
-      }
+      // let sum1 = 0;
+      // function sum(...number) {
+      //   for (let i = 0; i < number.length; i++) {
+      //     sum1 += number[i];
+      //   }
+      //   document.write(sum1);
+      // }
 
-      sum(10, 20, 30, 40, 50);
+      // sum(10, 20, 30, 40, 50);
 
       //parseInt(prompt())
       //Number(prompt())
@@ -112,7 +112,6 @@
 
       // document.write("평균 점수는" + result + "점입니다");
 
-
       // let a;   // 전역변수
       // function add() {
       //   let a;  // 지역번수
@@ -123,6 +122,26 @@
 
       //   }
       // }
+
+      // (function() {
+      //   자바스크립트 코드;
+      // }());
+
+      (function (x) {
+        console.log(x * x);
+      })(4); // 마지막 괄호안에 () 작성
+
+      (mySquare = function (x) {
+        console.log(x * x);
+      })(3); // 마지막 괄호밖에 () 작성
+
+      mySquare(4);
+
+      var mySquare = (function (x) {
+        return x * x;
+      })(5);
+
+      console.log(mySquare);
     </script>
   </head>
   <body id="theBody">
